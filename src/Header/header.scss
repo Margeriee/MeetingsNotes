@@ -1,0 +1,15 @@
+header {
+    background-color: #264653;
+    color: white;
+
+    div {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .clockData {
+        padding-left: 20px;
+    }
+}

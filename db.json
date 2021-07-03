@@ -2,9 +2,21 @@
   "tasks": [
     {
       "description": " Zadanie 1",
-      "person": "Gosia",
+      "person": "Kamila",
       "deadline": " 03.07.2021",
-      "id": 1
+      "id": 2
+    },
+    {
+      "description": " Zadanie 1",
+      "person": "Sebastian",
+      "deadline": " 03.07.2021",
+      "id": 3
+    },
+    {
+      "description": " Zadanie 2",
+      "person": "Gosia",
+      "deadline": " 04.07.2021",
+      "id": 4
     }
   ]
 }

@@ -1,12 +1,7 @@
 import React from 'react';
 
   export const Task = (props) => {
-    const { task, onDelete, onEdit } = props;
-    // const [isEdit, setIsEdit] = useState(false);
-    // const [form, setForm] = useState({});
-
-    // console.log(task);
-    
+    const { task, onDelete} = props;
 
     return (
       <>
@@ -15,7 +10,6 @@ import React from 'react';
           <span>{task.person} </span>
           <span>{task.description} </span>
           <span>{task.deadline} </span>
-          {/* <button onClick={() => setIsEdit(true)}>Edytuj</button> */}
         </li>
       </>
     );

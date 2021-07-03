@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export const AddTask = (props) => {
   const {onAdd} = props;
   const [form, setForm] = useState({
-    description: " ",
+    decription: " ",
     person: " ",
     deadline: " ",
   });
