@@ -1,0 +1,56 @@
+.form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(30px, auto);
+}
+
+.form__description {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+
+    input {
+        height: 15px;
+        width: 200%;
+    }
+}
+
+.form__person {
+    display: flex;
+    flex-direction: column;
+    grid-column: 3;
+
+    select {
+        height: 21px;
+        width: 100%;
+
+        option {
+            height: 15px;
+        }
+    }
+}
+
+.form__deadline {
+    display: flex;
+    flex-direction: column;
+    grid-column: 4;
+
+    input {
+        height: 15px;
+        width: 97%;
+    }
+}
+
+.form__button {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        padding: 8px 50px;
+        margin-top: 10px;
+        border: none;
+        background-color: #e9c46a;
+        border-radius: 5px;
+    }
+}

@@ -30,27 +30,33 @@ export const AddTask = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Dodaj nowe zadanie</h1>
-      <label>
-        Zadanie
-        <input name="description" value={form.description} onChange={handleChange} />
-      </label>
-      <label>
-        Osoba przypisana
-        <select name="person" value={form.person} onChange={handleChange}>
-          <option value="Empty"></option>
-          <option value="Gosia">Gosia</option>
-          <option value="Kamila">Kamila</option>
-          <option value="Sebastian">Sebastian</option>
-          <option value="Wojtek">Wojtek</option>
-        </select>
-      </label>
-      <label>
-        Deadline
-        <input name="deadline" value={form.deadline} onChange={handleChange} />
-      </label>
-      <button type="submit">Dodaj</button>
-    </form>
+    <>
+      <div className="div__h2"><h2>Dodaj nowe zadanie</h2></div>
+      <form onSubmit={handleSubmit}>
+        <div className="form">
+          <label className="form__description">
+            Zadanie
+            <input name="description" value={form.description} onChange={handleChange} />
+          </label>
+          <label className="form__person">
+            Osoba przypisana
+            <select name="person" value={form.person} onChange={handleChange}>
+              <option value="Empty"></option>
+              <option value="Gosia">Gosia</option>
+              <option value="Kamila">Kamila</option>
+              <option value="Sebastian">Sebastian</option>
+              <option value="Wojtek">Wojtek</option>
+            </select>
+          </label>
+          <label className="form__deadline">
+            Deadline
+            <input name="deadline" value={form.deadline} onChange={handleChange} />
+          </label>
+        </div>
+        <div className="form__button">
+          <button type="submit">Dodaj</button>
+        </div>
+      </form>
+    </>
   );
 };

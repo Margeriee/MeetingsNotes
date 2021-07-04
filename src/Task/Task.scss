@@ -1,0 +1,30 @@
+.task {
+    list-style: none;
+}
+
+.task__details {
+    display: inline-block;
+}
+
+.fontAwesome {
+    font-size: 20px;
+}
+
+.time {
+    color: darkgreen;
+    margin-right: 5px;
+}
+
+.edit {
+    color: darkblue;
+    margin-right: 5px;
+}
+
+.trash {
+    color: darkred;
+}
+
+.task__checkbox {
+    margin-left: 15px;
+}
+

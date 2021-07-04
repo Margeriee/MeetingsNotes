@@ -1,7 +1,7 @@
 import './App.scss';
 import React, { useEffect, useState } from 'react';
-import { Task } from './Task/Task';
-import { AddTask } from './AddTask/AddTask'
+import { TaskTable } from './TaskTable/TaskTable';
+import { AddTask } from './AddTask/AddTask';
 
 const apiURL = 'http://localhost:3001';
 
@@ -49,10 +49,8 @@ function App() {
 
   return (
     <div className="App container">
-    <AddTask onAdd={addTask}/>
-      <ul>
-        {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} />)}
-      </ul>      
+      <AddTask onAdd={addTask}/> 
+      <TaskTable deleteTask={deleteTask} tasks={tasks}/> 
     </div>
   )
 }

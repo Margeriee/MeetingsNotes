@@ -1,22 +1,29 @@
 {
+  "finished_tasks": [],
   "tasks": [
     {
       "description": " Zadanie 1",
+      "person": "Wojtek",
+      "deadline": " 03.07.2021",
+      "id": 7
+    },
+    {
+      "description": "s",
+      "person": "Gosia",
+      "deadline": " 03.07.2021",
+      "id": 8
+    },
+    {
+      "description": "Długi opis zadania Długi opis zadania Długi opis zadania Długi opis zadania ",
       "person": "Kamila",
-      "deadline": " 03.07.2021",
-      "id": 2
+      "deadline": " 04.07.2021",
+      "id": 9
     },
     {
-      "description": " Zadanie 1",
-      "person": "Sebastian",
-      "deadline": " 03.07.2021",
-      "id": 3
-    },
-    {
-      "description": " Zadanie 2",
+      "description": " Zadanie",
       "person": "Gosia",
       "deadline": " 04.07.2021",
-      "id": 4
+      "id": 10
     }
   ]
 }

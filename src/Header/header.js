@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <header>
             <div className="container">
-                <span>Culture & Performance</span>
+                <h1>Culture & Performance</h1>
                 <Clock />
             </div>
         </header>
