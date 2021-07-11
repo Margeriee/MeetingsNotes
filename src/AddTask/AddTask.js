@@ -6,6 +6,7 @@ export const AddTask = (props) => {
     decription: " ",
     person: " ",
     deadline: " ",
+    time: "0",
   });
 
   const handleChange = (event) => {
@@ -20,12 +21,14 @@ export const AddTask = (props) => {
     onAdd({
         description: form.description,
         person: form.person,
-        deadline: form.deadline
+        deadline: form.deadline, 
+        time: "0"
     });
     setForm({
         description: "",
         person: "",
         deadline: "",
+        time: "0"
     })
   }
 

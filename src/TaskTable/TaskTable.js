@@ -2,7 +2,10 @@ import React from 'react';
 import { Task } from '../Task/Task';
 
 export const TaskTable = (props) => {
-    const {deleteTask, tasks} = props;
+    const {deleteTask, tasks, done} = props;
+
+    console.log(props);
+
     return (
         <div className="table">
             <div className="div__h2"><h2>Bieżące zadania</h2></div>
@@ -18,7 +21,7 @@ export const TaskTable = (props) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} />)}
+                    {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} done={done}/>)}
                 </tbody>
             </table>   
         </div>
