@@ -22,13 +22,15 @@ export const AddTask = (props) => {
         description: form.description,
         person: form.person,
         deadline: form.deadline, 
-        time: "0"
+        time: "0",
+        done: false
     });
     setForm({
         description: "",
         person: "",
         deadline: "",
-        time: "0"
+        time: "0",
+        done: false
     })
   }
 

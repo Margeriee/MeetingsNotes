@@ -1,37 +1,33 @@
 {
   "tasks": [
     {
-      "description": " Zadanie",
-      "person": "Gosia",
-      "deadline": " 04.07.2021",
-      "time": "0",
-      "id": 9,
-      "done": true
-    },
-    {
-      "description": " Zadanie 2",
-      "person": "Kamila",
-      "deadline": " 03.07.2021",
-      "time": "0",
       "id": 10,
-      "done": true
+      "time": "00",
+      "done": false
     },
     {
-      "description": " Zadanie 2",
-      "person": "Wojtek",
+      "description": " Zadanie 1",
+      "person": "Sebastian",
+      "deadline": " 10.07.2021",
+      "id": 15,
+      "time": "00",
+      "done": false
+    },
+    {
+      "description": " Zadanie 1",
+      "person": "Sebastian",
       "deadline": " 10.07.2021",
       "time": "0",
-      "id": 11,
-      "done": false
+      "done": true,
+      "id": 16
     },
     {
-      "description": " Done task",
-      "person": "Wojtek",
-      "deadline": " 03.07.2021",
-      "time": "0",
-      "id": 1,
-      "done": false
+      "description": " Zadanie",
+      "person": "Gosia",
+      "deadline": " 11.07.2021",
+      "time": "001200000000000000000000000",
+      "done": true,
+      "id": 18
     }
-  ],
-  "doneTasks": []
+  ]
 }
