@@ -19,7 +19,7 @@ export const TaskTable = (props) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} done={done} onEdit={onEdit} showPopup={showPopup}/>)}
+                    {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} nb    s onEdit={onEdit} showPopup={showPopup}/>)}
                 </tbody>
             </table>   
         </div>

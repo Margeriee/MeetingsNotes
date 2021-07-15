@@ -1,55 +1,38 @@
-.modal__wrap {
+.PopUpForm {
     position: fixed;
     display: block;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 0 auto;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    height: 150px;
     z-index: 100;
-    overflow-x: hidden;
-    background-color: rgba(31, 32, 41, .75);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 250ms 700ms ease;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+
+    .popUpName {
+        margin: 15px 0;
+    }
+
+    .popUpButton {
+        padding: 8px 50px;
+        margin-top: 10px;
+        border: none;
+        background-color: #e9c46a;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .description, .person, .deadline {
+        margin: 0 10px;
+        border: 1px solid grey;
+    }
 }
 
-.visible {
-    pointer-events: auto;
-    opacity: 1;
-    transition: all 300ms ease-in-out;
-    display: block;
-}
-
-.modal {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: relative;
-    display: none;
-    width: 60vw;
-    height: 60%;
-    min-height: 400px;
-    min-width: 400px;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    padding-bottom: 20px;
-    background-color: #fff;
-    align-self: center;
-    box-shadow: 0 12px 25px 0 rgba(199, 175, 189, .25);
-    opacity: 0;
-    transform: scale(0.6);
-    transition: opacity 250ms 250ms ease, transform 300ms 250ms ease;
-    transform: scale(0);
-}
-
-.visible .modal {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 250ms 500ms ease, transform 350ms 500ms ease;;
-    display: block;
-}

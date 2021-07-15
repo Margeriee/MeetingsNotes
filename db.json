@@ -1,17 +1,12 @@
 {
   "tasks": [
     {
-      "id": 10,
-      "time": "00",
-      "done": false
-    },
-    {
       "description": " Zadanie 1",
       "person": "Sebastian",
       "deadline": " 10.07.2021",
       "id": 15,
       "time": "00",
-      "done": false
+      "done": true
     },
     {
       "description": " Zadanie 1",
@@ -28,6 +23,35 @@
       "time": "001200000000000000000000000",
       "done": true,
       "id": 18
+    },
+    {
+      "description": " Zadanie 1",
+      "person": "Kamila",
+      "deadline": " 04.07.2021",
+      "time": "0000000000000000000",
+      "done": true,
+      "id": 22
+    },
+    {
+      "id": 23,
+      "time": "012",
+      "done": false
+    },
+    {
+      "id": 25,
+      "description": "Pierwotny",
+      "person": "Gosia",
+      "deadline": "nnn",
+      "time": "0",
+      "done": false
+    },
+    {
+      "description": "vbnm",
+      "person": "Gosia",
+      "deadline": " xfcgvbn",
+      "time": "0",
+      "done": false,
+      "id": 26
     }
   ]
 }

@@ -19,7 +19,8 @@ export const PopUpForm = (props) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(form)
+        console.log(`Handle Submit: ${task}`);
+        console.log(task);
         onEdit({
           id: task.id,
           description: form.description,
@@ -28,32 +29,41 @@ export const PopUpForm = (props) => {
           time: task.time,
           done: task.done,
         });
+        setForm({
+            description: "",
+            person: "",
+            deadline: ""
+        })
+
         setIsEdit(false);
       }
 
     return ((isEdit === true) ? 
     (
         <>
-            <form onSubmit={handleSubmit}>
-                <h3>Edytuj zadanie</h3>
-                <label>
-                    Opis
-                    <input value={form.description} onChange={handleChange} />
-                </label>
-                <label>
-                    Osoba przypisana
-                    <select value={form.person} onChange={handleChange}>
-                        <option value="Gosia">Gosia</option>
-                        <option value="Kamila">Kamila</option>
-                        <option value="Sebastian">Sebastian</option>
-                        <option value="Wojtek">Wojtek</option>
-                    </select>
-                </label>
-                <label>
-                    Deadline
-                    <input value={form.deadline} onChange={handleChange} />
-                </label>
-                <button type="submit">Edytuj</button>
+            <form className="PopUpForm" onSubmit={handleSubmit}>
+                <h3 className="popUpName">Edytuj zadanie</h3>
+                <div>
+                    <label>
+                        Opis:
+                        <input className="description" name="description" value={form.description} onChange={handleChange} />
+                    </label>
+                    <label>
+                        Osoba przypisana: 
+                        <select className="person" name="person" value={form.person} onChange={handleChange}>
+                            <option></option>
+                            <option value="Gosia">Gosia</option>
+                            <option value="Kamila">Kamila</option>
+                            <option value="Sebastian">Sebastian</option>
+                            <option value="Wojtek">Wojtek</option>
+                        </select>
+                    </label>
+                    <label>
+                        Deadline:
+                        <input className="deadline" name="deadline" value={form.deadline} onChange={handleChange} />
+                    </label>
+                </div>
+                <button className="popUpButton" type="submit">Edytuj</button>
                 </form>
         </>
     ) : "");

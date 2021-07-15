@@ -37,14 +37,13 @@ import { faTrashAlt, faEdit, faStopwatch } from '@fortawesome/free-solid-svg-ico
       <>
         <tr className="task">
             <td><input type="checkbox" className="task__checkbox" checked={task.done} onChange={() => done(task)}/></td>
-            <td><span className="task__details task__description">{task.description} </span></td>
-            <td><span className="task__details task__person">{task.person} </span></td>
-            <td><span className="task__details task__deadline">{task.deadline} </span></td>
+            <td className="task__description"><span className="task__details">{task.description} </span></td>
+            <td className="task__person"><span className="task__details">{task.person} </span></td>
+            <td className="task__deadline"><span className="task__details">{task.deadline} </span></td>
             <td>{formatTime(task.time)} - {formatTime(timer)}</td>
             <td>
                 <FontAwesomeIcon className="fontAwesome time" icon={faStopwatch} onClick={handleStart}/>
                 <FontAwesomeIcon className="fontAwesome edit" icon={faEdit} onClick={() => showPopup(task)}/>
-                
                 <FontAwesomeIcon className="fontAwesome trash" icon={faTrashAlt} onClick={() => onDelete(task.id)}/>
             </td>
         </tr>

@@ -63,6 +63,7 @@ function App() {
   }
 
   const updateTask = (taskData) => {
+    // console.log(taskData);
     fetch(`${apiURL}/tasks/${taskData.id}`, {
       method: 'PUT',
       headers: {
@@ -78,14 +79,12 @@ function App() {
       });
   };
 
-
   const showPopup = (task) => {
     setShow(true);
     setEditTask(task);
   }
 
   const handleDoneDone = (taskData) => {
-    // console.log(JSON.stringify(taskData))
     taskData.done = !taskData.done
     fetch(`${apiURL}/tasks/${taskData.id}`, {
       method: 'PUT',
@@ -98,14 +97,14 @@ function App() {
         const taskToUpdate = doneTasks.find(task => task.id === updatedTask.id);
         Object.assign(taskToUpdate, updatedTask);
         
-        getTasks();//([...tasks]);
-        getDoneTasks();//([...doneTasks]);
+        getTasks();
+        getDoneTasks();
       });
   };
 
   const handleDone = (taskData) => {
-    // console.log(JSON.stringify(taskData))
     taskData.done = !taskData.done
+
     fetch(`${apiURL}/tasks/${taskData.id}`, {
       method: 'PUT',
       headers: {
@@ -117,19 +116,21 @@ function App() {
         const taskToUpdate = tasks.find(task => task.id === updatedTask.id);
         Object.assign(taskToUpdate, updatedTask);
         
-        getTasks();//([...tasks]);
-        getDoneTasks();//([...doneTasks]);
+        getTasks();
+        getDoneTasks();
       });
   };
-  console.log('showing show');
-  console.log(show);
+
   return (
+    <>
     <div className="App container">
       <AddTask onAdd={addTask}/> 
       <PopUpForm task={editTask} onEdit={updateTask} isEdit={show} setIsEdit={setShow} />
       <TaskTable deleteTask={deleteTask} tasks={tasks} done={handleDone} name="Zadania bieżące" onEdit={updateTask} showPopup={showPopup}/> 
       <TaskTable deleteTask={deleteTask} tasks={doneTasks} done={handleDoneDone} name="Zadania wykonane" onEdit={updateTask} showPopup={showPopup}/> 
     </div>
+    <div className="footer"><span>Małgorzata Brzuska</span></div>
+    </>
   )
 }
 
