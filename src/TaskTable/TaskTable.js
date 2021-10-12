@@ -2,7 +2,7 @@ import React from 'react';
 import { Task } from '../Task/Task';
 
 export const TaskTable = (props) => {
-    const {deleteTask, tasks, done, name, onEdit, showPopup} = props;
+    const {name, tasks, deleteTask, done, onEdit, showPopup} = props;
 
     return (
         <div className="table">
@@ -19,7 +19,7 @@ export const TaskTable = (props) => {
                 </tr>
                 </thead>
                 <tbody>
-                    {tasks.map(task => <Task onDelete={deleteTask} key={task.id} task={task} nb    s onEdit={onEdit} showPopup={showPopup}/>)}
+                    {tasks.map(task => <Task key={task.id} task={task} onDelete={deleteTask} done={done} onEdit={onEdit} showPopup={showPopup}/>)}
                 </tbody>
             </table>   
         </div>

@@ -53,7 +53,7 @@ export const AddTask = (props) => {
           </label>
           <label className="form__deadline">
             Deadline
-            <input name="deadline" value={form.deadline} onChange={handleChange} />
+            <input name="deadline" type="date" value={form.deadline} onChange={handleChange} />
           </label>
         </div>
         <div className="form__button">

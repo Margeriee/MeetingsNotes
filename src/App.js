@@ -4,34 +4,23 @@ import { TaskTable } from './TaskTable/TaskTable';
 import { AddTask } from './AddTask/AddTask';
 import { PopUpForm } from './PopUpForm/PopUpForm';
 
-const apiURL = 'http://localhost:3001';
+const apiURL = 'http://localhost:3000';
 
 function App() {
   const [tasks, setTasks] = useState([]);
   const [doneTasks, setDoneTasks] = useState([]);
   const [editTask, setEditTask] = useState([]);
-  const [
-      show,
-      setShow
-  ] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     getTasks();
-    getDoneTasks();
   }, []);
 
   const getTasks = () => {
     fetch(`${apiURL}/tasks`).then((res) => res.json()).then(
       (task) => {
         setTasks(task.filter(task => task.done === false));
-      } 
-    )
-  };
-
-  const getDoneTasks = () => {
-    fetch(`${apiURL}/tasks`).then((res) => res.json()).then(
-      (doneTask) => {
-        setDoneTasks(doneTask.filter(task => task.done === true));
+        setDoneTasks(task.filter(task => task.done === true));
       } 
     )
   };
@@ -84,7 +73,7 @@ function App() {
     setEditTask(task);
   }
 
-  const handleDoneDone = (taskData) => {
+  const handleDoneDone = (taskData, isDone) => {
     taskData.done = !taskData.done
     fetch(`${apiURL}/tasks/${taskData.id}`, {
       method: 'PUT',
@@ -98,13 +87,11 @@ function App() {
         Object.assign(taskToUpdate, updatedTask);
         
         getTasks();
-        getDoneTasks();
       });
   };
 
   const handleDone = (taskData) => {
     taskData.done = !taskData.done
-
     fetch(`${apiURL}/tasks/${taskData.id}`, {
       method: 'PUT',
       headers: {
@@ -117,19 +104,18 @@ function App() {
         Object.assign(taskToUpdate, updatedTask);
         
         getTasks();
-        getDoneTasks();
       });
   };
 
   return (
     <>
-    <div className="App container">
-      <AddTask onAdd={addTask}/> 
-      <PopUpForm task={editTask} onEdit={updateTask} isEdit={show} setIsEdit={setShow} />
-      <TaskTable deleteTask={deleteTask} tasks={tasks} done={handleDone} name="Zadania bieżące" onEdit={updateTask} showPopup={showPopup}/> 
-      <TaskTable deleteTask={deleteTask} tasks={doneTasks} done={handleDoneDone} name="Zadania wykonane" onEdit={updateTask} showPopup={showPopup}/> 
-    </div>
-    <div className="footer"><span>Małgorzata Brzuska</span></div>
+      <div className="App container">
+        <AddTask onAdd={addTask}/> 
+        <PopUpForm task={editTask} onEdit={updateTask} isEdit={show} setIsEdit={setShow} />
+        <TaskTable deleteTask={deleteTask} tasks={tasks} done={handleDone} name="Zadania bieżące" onEdit={updateTask} showPopup={showPopup}/> 
+        <TaskTable deleteTask={deleteTask} tasks={doneTasks} done={handleDoneDone} name="Zadania wykonane" onEdit={updateTask} showPopup={showPopup}/> 
+      </div>
+      <div className="footer"><span>Małgorzata Brzuska</span></div>
     </>
   )
 }

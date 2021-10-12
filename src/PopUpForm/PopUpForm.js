@@ -21,6 +21,7 @@ export const PopUpForm = (props) => {
         event.preventDefault();
         console.log(`Handle Submit: ${task}`);
         console.log(task);
+
         onEdit({
           id: task.id,
           description: form.description,
@@ -29,6 +30,7 @@ export const PopUpForm = (props) => {
           time: task.time,
           done: task.done,
         });
+        
         setForm({
             description: "",
             person: "",

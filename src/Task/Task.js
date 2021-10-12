@@ -6,12 +6,12 @@ import { faTrashAlt, faEdit, faStopwatch } from '@fortawesome/free-solid-svg-ico
     const { task, onDelete, done, onEdit, showPopup } = props;
     const [timer, setTimer] = useState(0)
     const [isActive, setIsActive] = useState(false)
-    const [isPaused, setIsPaused] = useState(false)
+    // const [isPaused, setIsPaused] = useState(false)
     const increment = useRef(null)
     
     const handleStart = () => {
       setIsActive(!isActive)
-      setIsPaused(!isPaused)
+      // setIsPaused(!isPaused)
       if (isActive === true){
       increment.current = setInterval(() => {
         setTimer((timer) => timer + 1)
