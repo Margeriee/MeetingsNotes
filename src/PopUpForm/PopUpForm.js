@@ -7,6 +7,10 @@ export const PopUpForm = (props) => {
       person: task.person,
       deadline: task.deadline
     });
+
+    const handleClose = () => {
+        setIsEdit(false);
+    }
     
     const handleChange = (event) => {
         setForm({
@@ -44,6 +48,7 @@ export const PopUpForm = (props) => {
     (
         <>
             <form className="PopUpForm" onSubmit={handleSubmit}>
+                <button className="closePopUpButton" type="button" onClick={handleClose}>x</button>
                 <h3 className="popUpName">Edytuj zadanie</h3>
                 <div>
                     <label>
@@ -62,7 +67,7 @@ export const PopUpForm = (props) => {
                     </label>
                     <label>
                         Deadline:
-                        <input className="deadline" name="deadline" value={form.deadline} onChange={handleChange} />
+                        <input className="deadline" type="date" name="deadline" value={form.deadline} onChange={handleChange} />
                     </label>
                 </div>
                 <button className="popUpButton" type="submit">Edytuj</button>

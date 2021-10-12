@@ -1,68 +1,44 @@
 {
   "tasks": [
     {
-      "id": 15,
-      "description": " Zadanie",
-      "person": "Kamila",
-      "deadline": " 04.07.2021",
-      "time": "0011212",
-      "done": false
-    },
-    {
-      "description": " Zadanie 1",
-      "person": "Sebastian",
-      "deadline": " 10.07.2021",
-      "time": "0",
-      "done": false,
-      "id": 16
-    },
-    {
-      "description": " Zadanie",
-      "person": "Gosia",
-      "deadline": " 11.07.2021",
-      "time": "001200000000000000000000000",
-      "done": false,
-      "id": 18
-    },
-    {
-      "description": " Zadanie 1",
-      "person": "Kamila",
-      "deadline": " 04.07.2021",
-      "time": "00000000000000000000",
-      "done": true,
-      "id": 22
-    },
-    {
-      "id": 23,
-      "description": "Nowe zadanie",
-      "person": "Gosia",
-      "deadline": " 03.07.2021",
-      "time": "01218",
-      "done": true
-    },
-    {
-      "description": " Zadanie 1",
-      "person": "Kamila",
-      "deadline": " 10.07.2021",
-      "time": "0000",
-      "done": true,
-      "id": 27
-    },
-    {
       "description": "vccxc",
       "person": "Gosia",
       "deadline": "2021-08-19",
-      "time": "00",
-      "done": true,
+      "time": "00000015",
+      "done": false,
       "id": 28
     },
     {
-      "id": 29,
+      "id": 31,
+      "description": " Zadanie 1",
+      "person": "Gosia",
+      "deadline": "1414-12-14",
+      "time": "0",
+      "done": true
+    },
+    {
       "description": " Zadanie 2",
       "person": "Kamila",
-      "deadline": " 11.07.2021",
+      "deadline": "1141-04-14",
+      "time": "06",
+      "done": true,
+      "id": 32
+    },
+    {
+      "description": "ługi opis zadania Długi opis za",
+      "person": "Sebastian",
+      "deadline": "2111-02-11",
       "time": "0",
-      "done": false
+      "done": false,
+      "id": 33
+    },
+    {
+      "description": "Zadanie zmienione",
+      "person": "Kamila",
+      "deadline": "1211-12-31",
+      "time": "024",
+      "done": false,
+      "id": 34
     }
   ]
 }
